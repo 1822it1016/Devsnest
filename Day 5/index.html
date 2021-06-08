@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calci</title>
+</head>
+<script>
+        window.onload = ()=>
+        {
+            let btn = document.getElementById("btn");
+            btn.addEventListener('click',calc);
+            function calc(e)
+            {
+                let a = document.getElementById("a").value;
+                let b = document.getElementById("b").value;
+                let z = 0;
+                if(e.target.id=="sum")
+                z=parseInt(a)+parseInt(b); 
+                else if(e.target.id=="sub")
+                z=a-b;
+                else if(e.target.id=="mul")
+                z=a*b;
+                else if(e.target.id=="div")
+                z = a/b;
+                document.getElementById("ans").innerHTML = "Value is " + String(z);
+            }
+
+        }
+</script>
+<style>
+    
+    body{
+        border: 2px solid black;
+        width: 300px;    }
+    .main{
+        display: inline;
+        width: 300px;
+        padding: auto;
+        text-align: center;
+        
+    }
+    .a{
+        display: block;
+        
+        margin: auto;
+        margin-top: 10px;
+        
+    }
+    .b{
+        display: block;
+        margin: 10px;
+        margin: auto;
+    }
+    #btn{
+        padding: 10px;
+    }
+</style>
+<body>
+    <div class="main">
+        <input type="number" class="a" id="a" placeholder="Enter first no.">
+        <input type="number" class="b" id="b" placeholder="Enter secont no">
+        <div id="btn">
+        <button id="sum">SUM</button>
+        <button id="sub">SUB</button>
+        <button id="mul">MUL</button>
+        <button id="div">DIV</button>
+        </div>
+        <p id="ans"></p>
+    </div>
+</body>
+</html>
