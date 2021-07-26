@@ -1,0 +1,14 @@
+import React, {useContext} from 'react';
+import Context from "../Context/AuthContext";
+
+function About() {
+  const logger = useContext(Context)
+  return (
+    <div>
+      <h1>About</h1>
+      <div>{logger.loggedIn?"You are logged in":"You are not logged in"}</div>
+    </div>
+  );
+}
+
+export default About;

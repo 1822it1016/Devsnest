@@ -1,0 +1,43 @@
+.app {
+  text-align: center;
+  background-color: #ffffff;
+  min-height: 100vh;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.app nav {
+  background-color: #91a9db;
+  margin-bottom: 20px;
+}
+
+.app nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.app nav ul li {
+  margin: auto;
+  padding: 2vmin;
+}
+
+.app nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.app nav li a:hover{
+   color: #888888;
+}
+
+.app h1 {
+  margin-bottom: 20px;
+}
+
+.app button{
+  padding: 10px 15px;
+  font-size: 4vmin;
+  margin: 10px;
+  cursor: pointer;
+}
